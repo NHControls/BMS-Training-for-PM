@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Khóa Học Vận Hành & Bảo Trì Tòa Nhà | Nam Hoàng Controls</title>
-    <meta name="description" content="Khóa đào tạo chuyên sâu về vận hành BMS, xử lý sự cố HVAC và bảo trì tòa nhà từ chuyên gia 15 năm kinh nghiệm Nam Hoàng Controls.">
+    <title>Khóa Học Giám Sát & Quản Lý Dự Án BMS | Nam Hoàng Controls</title>
+    <meta name="description" content="Chương trình đào tạo chuyên sâu dành cho Quản lý dự án và Giám sát M&E: Quy trình T&C, nghiệm thu BMS, xử lý sự cố và bàn giao hệ thống chuẩn mực.">
     
     <!-- Tailwind CSS with Custom Config -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -33,17 +33,22 @@
             font-family: 'Roboto', sans-serif;
             scroll-behavior: smooth;
         }
+        /* Thay đổi ảnh nền sang phong cách Quản lý/Giám sát công trình */
         .hero-bg {
-            background-image: linear-gradient(rgba(10, 37, 88, 0.85), rgba(10, 37, 88, 0.75)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
+            background-image: linear-gradient(rgba(15, 23, 42, 0.9), rgba(30, 58, 138, 0.8)), url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
             background-size: cover;
             background-position: center;
+            background-attachment: fixed;
         }
         .btn-glow:hover {
-            box-shadow: 0 0 15px rgba(234, 179, 8, 0.6);
+            box-shadow: 0 0 20px rgba(251, 191, 36, 0.5);
+        }
+        .process-card:hover {
+            transform: translateY(-5px);
         }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body class="bg-slate-50 text-slate-800">
 
     <!-- Header / Navigation -->
     <header class="bg-white shadow-md fixed w-full z-50">
@@ -54,9 +59,9 @@
                 <div class="flex items-end gap-1 h-12 p-1">
                     <div class="w-2 h-4 bg-nhTeal"></div>
                     <div class="w-2 h-6 bg-nhTeal"></div>
-                    <div class="w-2 h-8 bg-nhNavy"></div>
-                    <div class="w-2 h-10 bg-nhGold"></div>
                     <div class="w-2 h-7 bg-nhNavy"></div>
+                    <div class="w-2 h-8 bg-nhGold"></div>
+                    <div class="w-2 h-5 bg-nhNavy"></div>
                 </div>
                 
                 <div class="hidden md:block">
@@ -73,171 +78,155 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero-bg text-white pt-32 pb-20 md:pt-40 md:pb-32 px-4">
-        <div class="container mx-auto text-center max-w-4xl">
-            <span class="bg-yellow-500 text-blue-900 font-bold px-4 py-1 rounded-full text-sm uppercase tracking-wider mb-6 inline-block">
-                Dành cho Kỹ sư Vận hành & Bảo trì
-            </span>
+    <section class="hero-bg text-white pt-32 pb-24 md:pt-48 md:pb-32 px-4">
+        <div class="container mx-auto text-center max-w-5xl">
+            <div class="inline-flex items-center gap-2 bg-slate-800/80 border border-slate-600 px-4 py-1.5 rounded-full text-sm text-yellow-400 font-semibold tracking-wider mb-8 backdrop-blur-sm">
+                <i class="fa-solid fa-star"></i> DÀNH CHO CẤP QUẢN LÝ & GIÁM SÁT
+            </div>
             <h1 class="text-3xl md:text-5xl lg:text-6xl font-black mb-6 leading-tight">
-                LÀM CHỦ HỆ THỐNG BMS & <br>
-                <span class="text-yellow-400">TỐI ƯU VẬN HÀNH TÒA NHÀ</span>
+                QUẢN TRỊ DỰ ÁN & <br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-yellow-200">GIÁM SÁT HỆ THỐNG BMS</span>
             </h1>
-            <p class="text-lg md:text-xl text-gray-200 mb-10 max-w-2xl mx-auto leading-relaxed">
-                Trang bị kiến thức chuẩn từ chuyên gia 15 năm kinh nghiệm. Xử lý sự cố HVAC hiệu quả, giảm downtime và tránh sai sót gây mất bảo hành.
+            <p class="text-lg md:text-xl text-slate-200 mb-10 max-w-3xl mx-auto leading-relaxed font-light">
+                Kiểm soát toàn diện quy trình T&C, giảm thiểu rủi ro kỹ thuật và chuẩn hóa công tác nghiệm thu bàn giao dự án từ chuyên gia 15 năm kinh nghiệm.
             </p>
-            <div class="flex flex-col md:flex-row justify-center gap-4">
-                <a href="https://forms.gle/XsjRh7xzG7L8dCmX7" target="_blank" class="btn-glow bg-yellow-500 text-blue-900 font-bold py-4 px-8 rounded-lg text-lg hover:bg-yellow-400 transition duration-300 shadow-lg transform hover:-translate-y-1">
-                    <i class="fa-solid fa-paper-plane mr-2"></i> Đăng Ký Khóa Học
+            <div class="flex flex-col md:flex-row justify-center gap-5">
+                <a href="#register" class="btn-glow bg-yellow-500 text-slate-900 font-bold py-4 px-10 rounded-lg text-lg hover:bg-yellow-400 transition duration-300 shadow-xl">
+                    <i class="fa-solid fa-file-signature mr-2"></i> Đăng Ký Tư Vấn
                 </a>
-                <a href="#content" class="bg-transparent border-2 border-white text-white font-bold py-4 px-8 rounded-lg text-lg hover:bg-white hover:text-blue-900 transition duration-300">
-                    Xem Nội Dung
+                <a href="#program" class="group bg-white/10 backdrop-blur-md border border-white/30 text-white font-bold py-4 px-10 rounded-lg text-lg hover:bg-white hover:text-blue-900 transition duration-300">
+                    Xem Chi Tiết <i class="fa-solid fa-arrow-down ml-2 group-hover:translate-y-1 transition-transform"></i>
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- Why Choose Us (Authority) -->
-    <section class="py-16 bg-white">
+    <!-- Target Audience & Objectives -->
+    <section class="py-20 bg-white relative z-10 -mt-10 rounded-t-3xl mx-2 md:mx-0 shadow-[0_-10px_40px_rgba(0,0,0,0.05)]">
         <div class="container mx-auto px-4">
-            <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div class="max-w-4xl mx-auto text-center mb-12">
+                <h2 class="text-3xl font-bold text-nhNavy mb-4">Mục Tiêu Khóa Học</h2>
+                <div class="w-24 h-1.5 bg-nhGold mx-auto rounded-full mb-6"></div>
+                <p class="text-slate-600 text-lg leading-relaxed">
+                    Khóa học tập trung vào <strong>tư duy quản lý và kiểm soát hệ thống</strong>. Giúp PM/TVGS nắm vững kiến trúc tổng thể để chỉ đạo nhà thầu, giám sát chặt chẽ quy trình T&C để tránh sai sót tiềm ẩn, và đảm bảo hồ sơ bàn giao (Documentations) đầy đủ, đúng chuẩn pháp lý để kết thúc dự án (Project Closure) thành công.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:border-nhTeal transition duration-300 text-center group">
+                    <div class="w-16 h-16 bg-white shadow-md rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-nhTeal group-hover:text-white transition duration-300">
+                        <i class="fa-solid fa-sitemap text-2xl text-nhNavy group-hover:text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-2">Kiểm Soát Kiến Trúc</h3>
+                    <p class="text-sm text-slate-500">Hiểu sâu kiến trúc hệ thống & giao thức để quản lý tích hợp, tránh xung đột giữa các nhà thầu phụ.</p>
+                </div>
+
+                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:border-nhTeal transition duration-300 text-center group">
+                    <div class="w-16 h-16 bg-white shadow-md rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-nhTeal group-hover:text-white transition duration-300">
+                        <i class="fa-solid fa-list-check text-2xl text-nhNavy group-hover:text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-2">Quản Lý T&C</h3>
+                    <p class="text-sm text-slate-500">Nắm vững quy trình Test & Commissioning chuẩn để nghiệm thu thực tế, không bị "qua mặt" về kỹ thuật.</p>
+                </div>
+
+                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:border-nhTeal transition duration-300 text-center group">
+                    <div class="w-16 h-16 bg-white shadow-md rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-nhTeal group-hover:text-white transition duration-300">
+                        <i class="fa-solid fa-file-contract text-2xl text-nhNavy group-hover:text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-2">Chuẩn Hóa Bàn Giao</h3>
+                    <p class="text-sm text-slate-500">Kiểm soát hồ sơ nghiệm thu, bản vẽ hoàn công và quy trình chuyển giao công nghệ đúng cam kết.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Program Content (Đã rút gọn mô tả) -->
+    <section id="program" class="py-20 bg-slate-100">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-nhNavy">Nội Dung Đào Tạo</h2>
+                    <p class="text-slate-500 mt-2">Lộ trình bài bản từ tổng quan kiến trúc đến quy trình nghiệm thu thực tế.</p>
+                </div>
+                
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-8">
+                <!-- Left Column: Knowledge Base -->
                 <div class="space-y-6">
-                    <h2 class="text-3xl md:text-4xl font-bold text-blue-900">
-                        Tại sao bạn cần khóa học này?
-                    </h2>
-                    <div class="w-20 h-1 bg-yellow-500"></div>
-                    <p class="text-gray-600 text-lg">
-                        Hệ thống BMS là "bộ não" của tòa nhà, nhưng vận hành sai cách có thể dẫn đến hậu quả nghiêm trọng. Khóa học này được thiết kế bởi <strong>Nam Hoàng Controls</strong> - đơn vị với <strong>15 năm kinh nghiệm</strong> thực chiến trong lĩnh vực BMS và T&C (Testing & Commissioning).
-                    </p>
-                    <ul class="space-y-4">
-                        <li class="flex items-start">
-                            <i class="fa-solid fa-check-circle text-green-500 mt-1 mr-3 text-xl"></i>
-                            <span class="font-medium text-gray-700">Tránh thao tác sai gây hỏng thiết bị và mất bảo hành.</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fa-solid fa-check-circle text-green-500 mt-1 mr-3 text-xl"></i>
-                            <span class="font-medium text-gray-700">Giảm thời gian chết (downtime) khi sự cố xảy ra.</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fa-solid fa-check-circle text-green-500 mt-1 mr-3 text-xl"></i>
-                            <span class="font-medium text-gray-700">Hiểu sâu về cấu trúc hệ thống để phối hợp nhà thầu hiệu quả.</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="relative">
-                    <div class="absolute -top-4 -left-4 w-24 h-24 bg-yellow-100 rounded-full z-0"></div>
-                    <div class="relative z-10 bg-blue-50 p-8 rounded-2xl shadow-xl border border-blue-100">
-                        <div class="text-center">
-                            <i class="fa-solid fa-building-user text-6xl text-blue-900 mb-4"></i>
-                            <h3 class="text-2xl font-bold text-gray-800 mb-2">Đối Tượng Tham Gia</h3>
-                            <p class="text-gray-600">Phù hợp nhất cho:</p>
+                    <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-nhNavy process-card">
+                        <div class="flex items-start gap-4">
+                            <div class="bg-blue-50 text-nhNavy w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0 text-xl font-bold">01</div>
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-800 mb-2">Tổng quan & Kiến trúc BMS</h3>
+                                <p class="text-slate-600 text-sm leading-relaxed">
+                                    Hiểu rõ vai trò hệ thống, cấu trúc tổng thể và luồng tín hiệu điều khiển trong tòa nhà.
+                                </p>
+                            </div>
                         </div>
-                        <div class="mt-6 space-y-3">
-                            <div class="bg-white p-3 rounded-lg shadow-sm flex items-center">
-                                <i class="fa-solid fa-helmet-safety text-yellow-600 mr-3"></i> Kỹ sư vận hành tòa nhà
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-nhNavy process-card">
+                        <div class="flex items-start gap-4">
+                            <div class="bg-blue-50 text-nhNavy w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0 text-xl font-bold">02</div>
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-800 mb-2">Phân loại & Xử lý Tín hiệu</h3>
+                                <p class="text-slate-600 text-sm leading-relaxed">
+                                    Phân biệt tín hiệu DI/DO/AI/AO. Nhận diện và đánh giá thiết bị trường (Field devices).
+                                </p>
                             </div>
-                            <div class="bg-white p-3 rounded-lg shadow-sm flex items-center">
-                                <i class="fa-solid fa-wrench text-yellow-600 mr-3"></i> Kỹ sư bảo trì - bảo dưỡng
-                            </div>
-                            <div class="bg-white p-3 rounded-lg shadow-sm flex items-center">
-                                <i class="fa-solid fa-user-tie text-yellow-600 mr-3"></i> Quản lý kỹ thuật tòa nhà
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-nhNavy process-card">
+                        <div class="flex items-start gap-4">
+                            <div class="bg-blue-50 text-nhNavy w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0 text-xl font-bold">03</div>
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-800 mb-2">Truyền thông & Giao thức</h3>
+                                <p class="text-slate-600 text-sm leading-relaxed">
+                                    Nắm vững các mô hình kết nối (Topology) và giao thức cốt lõi: <strong>BACnet và Modbus</strong>.
+                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Course Content -->
-    <section id="content" class="py-20 bg-gray-100">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-blue-900 mb-4">Nội Dung Đào Tạo Chuyên Sâu</h2>
-                <p class="text-gray-600 max-w-2xl mx-auto">Chương trình được biên soạn dựa trên thực tế vận hành tại các dự án lớn, tập trung vào thực hành và xử lý tình huống.</p>
-            </div>
-
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Module 1 -->
-                <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300 overflow-hidden group">
-                    <div class="h-2 bg-blue-900 group-hover:bg-yellow-500 transition duration-300"></div>
-                    <div class="p-8">
-                        <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mb-6 text-blue-900 text-2xl">
-                            <i class="fa-solid fa-sitemap"></i>
+                <!-- Right Column: Process & Management -->
+                <div class="space-y-6">
+                    <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-nhGold process-card">
+                        <div class="flex items-start gap-4">
+                            <div class="bg-yellow-50 text-yellow-700 w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0 text-xl font-bold">04</div>
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-800 mb-2">Quy Trình T&C</h3>
+                                <p class="text-slate-600 text-sm leading-relaxed">
+                                    Các bước kiểm tra – chạy thử hệ thống. Phương pháp giảm thiểu rủi ro kỹ thuật khi triển khai.
+                                </p>
+                            </div>
                         </div>
-                        <h3 class="text-xl font-bold mb-3 text-gray-800">Tổng quan & Kiến trúc BMS</h3>
-                        <p class="text-gray-600 text-sm leading-relaxed">
-                            Hiểu rõ vai trò hệ thống BMS, cấu trúc tổng thể (Architecture) và luồng truyền tín hiệu điều khiển trong tòa nhà hiện đại.
-                        </p>
                     </div>
-                </div>
 
-                <!-- Module 2 -->
-                <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300 overflow-hidden group">
-                    <div class="h-2 bg-blue-900 group-hover:bg-yellow-500 transition duration-300"></div>
-                    <div class="p-8">
-                        <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mb-6 text-blue-900 text-2xl">
-                            <i class="fa-solid fa-wave-square"></i>
+                    <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-nhGold process-card">
+                        <div class="flex items-start gap-4">
+                            <div class="bg-yellow-50 text-yellow-700 w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0 text-xl font-bold">05</div>
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-800 mb-2">Nghiệm Thu & Bàn Giao</h3>
+                                <p class="text-slate-600 text-sm leading-relaxed">
+                                    Chuẩn hóa hồ sơ nghiệm thu, bản vẽ hoàn công đúng pháp lý và quy trình chuyển giao.
+                                </p>
+                            </div>
                         </div>
-                        <h3 class="text-xl font-bold mb-3 text-gray-800">Tín hiệu trong BMS</h3>
-                        <p class="text-gray-600 text-sm leading-relaxed">
-                            Phân biệt và xử lý các loại tín hiệu DI/DO/AI/AO. Làm chủ các thiết bị hiện trường (Sensors, Actuators) thường sử dụng.
-                        </p>
                     </div>
-                </div>
 
-                <!-- Module 3 -->
-                <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300 overflow-hidden group">
-                    <div class="h-2 bg-blue-900 group-hover:bg-yellow-500 transition duration-300"></div>
-                    <div class="p-8">
-                        <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mb-6 text-blue-900 text-2xl">
-                            <i class="fa-solid fa-network-wired"></i>
+                    <div class="bg-gradient-to-r from-nhNavy to-blue-900 p-6 rounded-xl shadow-lg text-white transform md:translate-x-4 border border-blue-700">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center text-yellow-400 text-2xl">
+                                <i class="fa-solid fa-pen-nib"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold text-yellow-400">THỰC HÀNH & ĐÁNH GIÁ</h3>
+                                <p class="text-blue-100 text-sm mt-1">Bài tập tình huống thực tế (Case Study) & Thi trắc nghiệm.</p>
+                            </div>
                         </div>
-                        <h3 class="text-xl font-bold mb-3 text-gray-800">Giao thức Truyền thông</h3>
-                        <p class="text-gray-600 text-sm leading-relaxed">
-                            Hướng dẫn cấu trúc kết nối (Topology). Giới thiệu chuyên sâu về các chuẩn giao thức phổ biến nhất: <strong>BACnet và Modbus</strong>.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Module 4 -->
-                <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300 overflow-hidden group">
-                    <div class="h-2 bg-blue-900 group-hover:bg-yellow-500 transition duration-300"></div>
-                    <div class="p-8">
-                        <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mb-6 text-blue-900 text-2xl">
-                            <i class="fa-solid fa-triangle-exclamation"></i>
-                        </div>
-                        <h3 class="text-xl font-bold mb-3 text-gray-800">Kỹ năng Xử lý sự cố</h3>
-                        <p class="text-gray-600 text-sm leading-relaxed">
-                            Quy trình chuẩn để: <strong>Xác định - Khoanh vùng - Xử lý</strong> sự cố nhanh chóng. Giảm thiểu tối đa downtime cho hệ thống.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Module 5 -->
-                <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300 overflow-hidden group">
-                    <div class="h-2 bg-blue-900 group-hover:bg-yellow-500 transition duration-300"></div>
-                    <div class="p-8">
-                        <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mb-6 text-blue-900 text-2xl">
-                            <i class="fa-solid fa-clipboard-check"></i>
-                        </div>
-                        <h3 class="text-xl font-bold mb-3 text-gray-800">Quy trình Bảo hành & Bảo trì</h3>
-                        <p class="text-gray-600 text-sm leading-relaxed">
-                            Cách nhận bàn giao hệ thống ĐÚNG & ĐỦ. Quy trình phối hợp hiệu quả với nhà thầu trong công tác bảo hành, bảo trì định kỳ.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Module 6 -->
-                <div class="bg-yellow-50 rounded-xl shadow-lg hover:shadow-xl transition duration-300 overflow-hidden border-2 border-yellow-200">
-                    <div class="p-8 text-center flex flex-col h-full justify-center">
-                        <div class="text-yellow-600 text-4xl mb-4">
-                            <i class="fa-solid fa-pen-to-square"></i>
-                        </div>
-                        <h3 class="text-xl font-bold mb-3 text-gray-800">THỰC HÀNH & ĐÁNH GIÁ</h3>
-                        <p class="text-gray-600 text-sm leading-relaxed mb-4">
-                            Làm bài tập tình huống thực tế & thi trắc nghiệm cuối buổi để cấp chứng chỉ.
-                        </p>
-                        <span class="text-blue-900 font-bold text-sm bg-yellow-200 py-1 px-3 rounded-full mx-auto">Cam kết chất lượng</span>
                     </div>
                 </div>
             </div>
@@ -245,84 +234,131 @@
     </section>
 
     <!-- Benefits Section -->
-    <section class="py-16 bg-blue-900 text-white relative overflow-hidden">
-        <div class="absolute inset-0 opacity-10 pattern-dots"></div>
-        <div class="container mx-auto px-4 relative z-10">
-            <h2 class="text-3xl font-bold text-center mb-12">Quyền Lợi Đặc Biệt Từ Nam Hoàng Controls</h2>
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-nhNavy mb-12">Quyền Lợi & Ưu Đãi Đặc Biệt</h2>
             
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <!-- Benefit 1 -->
-                <div class="bg-blue-800 p-6 rounded-lg border border-blue-700 hover:border-yellow-400 transition text-center">
-                    <i class="fa-solid fa-certificate text-4xl text-yellow-400 mb-4"></i>
-                    <h3 class="font-bold text-lg mb-2">Cấp Chứng Chỉ</h3>
-                    <p class="text-blue-200 text-sm">Xác nhận hoàn thành khóa học bởi Nam Hoàng Controls.</p>
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-lg transition text-center group">
+                    <div class="w-14 h-14 mx-auto bg-green-100 text-green-600 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition">
+                        <i class="fa-solid fa-tags text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2 text-slate-800">Ưu Đãi Học Phí</h3>
+                    <p class="text-slate-500 text-sm">Giảm ngay <span class="font-bold text-green-600">5%</span> cho khóa học nâng cao kế tiếp.</p>
                 </div>
-                
+
                 <!-- Benefit 2 -->
-                <div class="bg-blue-800 p-6 rounded-lg border border-blue-700 hover:border-yellow-400 transition text-center">
-                    <i class="fa-solid fa-headset text-4xl text-yellow-400 mb-4"></i>
-                    <h3 class="font-bold text-lg mb-2">Hỗ Trợ Trọn Đời</h3>
-                    <p class="text-blue-200 text-sm">Support Online trọn đời cho học viên sau khóa học.</p>
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-lg transition text-center group">
+                    <div class="w-14 h-14 mx-auto bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition">
+                        <i class="fa-solid fa-life-ring text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2 text-slate-800">Support Trọn Đời</h3>
+                    <p class="text-slate-500 text-sm">Hỗ trợ kỹ thuật Online trọn đời sau khóa học cho học viên.</p>
                 </div>
-                
+
                 <!-- Benefit 3 -->
-                <div class="bg-blue-800 p-6 rounded-lg border border-blue-700 hover:border-yellow-400 transition text-center">
-                    <i class="fa-solid fa-gift text-4xl text-yellow-400 mb-4"></i>
-                    <h3 class="font-bold text-lg mb-2">Ưu Đãi 5%</h3>
-                    <p class="text-blue-200 text-sm">Giảm giá 5% cho các khóa học nâng cao kế tiếp.</p>
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-lg transition text-center group">
+                    <div class="w-14 h-14 mx-auto bg-purple-100 text-purple-600 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition">
+                        <i class="fa-solid fa-certificate text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2 text-slate-800">Chứng Chỉ Uy Tín</h3>
+                    <p class="text-slate-500 text-sm">Cấp chứng nhận hoàn thành khóa học bởi Nam Hoàng Controls.</p>
                 </div>
 
                 <!-- Benefit 4 -->
-                <div class="bg-blue-800 p-6 rounded-lg border border-blue-700 hover:border-yellow-400 transition text-center">
-                    <i class="fa-solid fa-magnifying-glass-chart text-4xl text-yellow-400 mb-4"></i>
-                    <h3 class="font-bold text-lg mb-2">Tư Vấn Miễn Phí</h3>
-                    <p class="text-blue-200 text-sm">Tư vấn kỹ thuật cho các dự án của học viên.</p>
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-lg transition text-center group">
+                    <div class="w-14 h-14 mx-auto bg-orange-100 text-orange-600 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition">
+                        <i class="fa-solid fa-handshake text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2 text-slate-800">Tư Vấn Miễn Phí</h3>
+                    <p class="text-slate-500 text-sm">Tư vấn giải pháp kỹ thuật cho các dự án thực tế của học viên.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA Footer -->
-    <section id="register" class="py-20 bg-white text-center">
-        <div class="container mx-auto px-4 max-w-3xl">
-            <h2 class="text-4xl font-black text-gray-900 mb-4">Đừng Để Sự Cố BMS Làm Khó Bạn</h2>
-            <p class="text-xl text-gray-600 mb-10">Đăng ký ngay hôm nay để nâng cao năng lực chuyên môn và nhận ưu đãi từ Nam Hoàng Controls.</p>
+    <!-- Registration Section -->
+    <section id="register" class="py-24 bg-nhNavy relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#fbbf24 1px, transparent 1px); background-size: 30px 30px;"></div>
+        <div class="container mx-auto px-4 relative z-10 text-center max-w-3xl">
+            <h2 class="text-3xl md:text-5xl font-black text-white mb-6">Nâng Tầm Quản Lý Dự Án</h2>
+            <p class="text-xl text-blue-100 mb-10 font-light">
+                Đăng ký ngay để nhận tư vấn chi tiết về lộ trình đào tạo và các ưu đãi dành cho doanh nghiệp và cá nhân.
+            </p>
             
-            <a href="https://forms.gle/XsjRh7xzG7L8dCmX7" target="_blank" class="btn-glow inline-flex items-center justify-center bg-blue-900 text-white font-bold text-xl py-5 px-12 rounded-full hover:bg-blue-800 transition duration-300 shadow-2xl">
-                <span>ĐĂNG KÝ NGAY</span>
-                <i class="fa-solid fa-arrow-right ml-3"></i>
-            </a>
-            <p class="mt-4 text-sm text-gray-500 italic">* Số lượng học viên có hạn để đảm bảo chất lượng đào tạo.</p>
+            <div class="bg-white p-8 rounded-2xl shadow-2xl max-w-lg mx-auto transform rotate-1 hover:rotate-0 transition duration-500">
+                <form action="https://forms.gle/XsjRh7xzG7L8dCmX7" target="_blank">
+                    <div class="mb-4">
+                         <a href="https://forms.gle/XsjRh7xzG7L8dCmX7" target="_blank" class="block w-full bg-nhGold text-nhNavy font-bold py-4 rounded-lg hover:bg-yellow-400 transition text-lg shadow-lg">
+                            ĐĂNG KÝ NGAY <i class="fa-solid fa-paper-plane ml-2"></i>
+                        </a>
+                    </div>
+                    <p class="text-xs text-slate-400 mt-4">* Chúng tôi sẽ liên hệ lại trong vòng 24h làm việc.</p>
+                </form>
+            </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-slate-900 text-slate-300 py-12 border-t border-slate-800">
+    <!-- Footer (Đã điều chỉnh: Logo cân đối, thêm website, bỏ MXH & Chính sách) -->
+    <footer class="bg-slate-900 text-slate-300 py-16 border-t border-slate-800">
         <div class="container mx-auto px-4">
-            <div class="grid md:grid-cols-2 gap-8 items-center">
-                <div>
-                    <div class="flex items-center gap-2 mb-4">
-                         <!-- CSS Logo Replacement for Footer -->
+            <div class="grid md:grid-cols-3 gap-12">
+                
+                <!-- Column 1: Info -->
+                <div class="space-y-6">
+                    <!-- Adjusted Logo Alignment -->
+                    <div class="flex items-center gap-3">
+                         <!-- CSS Logo -->
                          <div class="flex items-end gap-1 h-10 p-1">
                             <div class="w-1.5 h-3 bg-nhTeal"></div>
                             <div class="w-1.5 h-5 bg-nhTeal"></div>
-                            <div class="w-1.5 h-7 bg-nhNavy"></div>
-                            <div class="w-1.5 h-9 bg-nhGold"></div>
                             <div class="w-1.5 h-6 bg-nhNavy"></div>
+                            <div class="w-1.5 h-7 bg-nhGold"></div>
+                            <div class="w-1.5 h-4 bg-nhNavy"></div>
                         </div>
-                        <h2 class="text-2xl font-bold text-white uppercase">Nam Hoàng Controls</h2>
+                        <h2 class="text-2xl font-bold text-white uppercase tracking-wider leading-none">
+                            Nam Hoàng <br><span class="text-sm font-normal text-slate-400 normal-case block pt-1">Controls</span>
+                        </h2>
                     </div>
-                    <p class="mb-4 text-sm text-slate-400">Đơn vị uy tín với 15 năm kinh nghiệm trong lĩnh vực BMS, T&C và tự động hóa tòa nhà.</p>
-                    <div class="space-y-2">
-                        <p><i class="fa-solid fa-location-dot w-6 text-yellow-500"></i> 302 Phan Văn Trị, P. Bình Lợi Trung, TP.HCM</p>
-                        <p><i class="fa-solid fa-phone w-6 text-yellow-500"></i> <a href="tel:0905545564" class="hover:text-white transition">0905 54 55 64</a></p>
-                        <p><i class="fa-solid fa-envelope w-6 text-yellow-500"></i> <a href="mailto:support@nhcontrols.com" class="hover:text-white transition">support@nhcontrols.com</a></p>
-                        <p><i class="fa-solid fa-globe w-6 text-yellow-500"></i> <a href="http://www.namhoangcontrols.com" target="_blank" class="hover:text-white transition">www.namhoangcontrols.com</a></p>
+                    <p class="text-sm text-slate-400 leading-relaxed">
+                        Đơn vị 15 năm kinh nghiệm thực chiến trong lĩnh vực BMS, T&C và tối ưu hóa năng lượng cho các tòa nhà & Data Center.
+                    </p>
+                </div>
+
+                <!-- Column 2: Quick Links -->
+                <div>
+                    <h3 class="text-white font-bold text-lg mb-6 relative inline-block">
+                        Liên Kết Nhanh
+                        <span class="absolute bottom-0 left-0 w-1/2 h-0.5 bg-nhGold"></span>
+                    </h3>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#" class="hover:text-nhGold transition flex items-center"><i class="fa-solid fa-angle-right text-xs mr-2 text-slate-500"></i> Trang Chủ</a></li>
+                        <li><a href="#program" class="hover:text-nhGold transition flex items-center"><i class="fa-solid fa-angle-right text-xs mr-2 text-slate-500"></i> Chương Trình Đào Tạo</a></li>
+                        <li><a href="#register" class="hover:text-nhGold transition flex items-center"><i class="fa-solid fa-angle-right text-xs mr-2 text-slate-500"></i> Đăng Ký Tư Vấn</a></li>
+                        <li><a href="http://www.namhoangcontrols.com" class="hover:text-nhGold transition flex items-center"><i class="fa-solid fa-angle-right text-xs mr-2 text-slate-500"></i> Về Nam Hoàng Controls</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Contact (Added Website, Removed Socials) -->
+                <div>
+                    <h3 class="text-white font-bold text-lg mb-6 relative inline-block">
+                        Liên Hệ
+                        <span class="absolute bottom-0 left-0 w-1/2 h-0.5 bg-nhGold"></span>
+                    </h3>
+                    <div class="space-y-4 text-sm mb-6">
+                        <p class="flex items-start"><i class="fa-solid fa-location-dot w-5 text-nhGold mt-1"></i> <span>302 Phan Văn Trị, P. Bình Lợi Trung, TP.HCM</span></p>
+                        <p class="flex items-center"><i class="fa-solid fa-phone w-5 text-nhGold"></i> <a href="tel:0905545564" class="hover:text-white transition">0905 54 55 64</a></p>
+                        <p class="flex items-center"><i class="fa-solid fa-envelope w-5 text-nhGold"></i> <a href="mailto:support@nhcontrols.com" class="hover:text-white transition">support@nhcontrols.com</a></p>
+                        <p class="flex items-center"><i class="fa-solid fa-globe w-5 text-nhGold"></i> <a href="http://www.namhoangcontrols.com" target="_blank" class="hover:text-white transition">www.namhoangcontrols.com</a></p>
                     </div>
                 </div>
-                <div class="text-center md:text-right">
-                   <p class="text-sm text-slate-500">&copy; 2026 Nam Hoàng Controls. All rights reserved.</p>
-                </div>
+
+            </div>
+            
+            <!-- Copyright (Removed Legal Links) -->
+            <div class="border-t border-slate-800 mt-12 pt-8 text-center text-xs text-slate-500">
+                <p>&copy; 2026 Nam Hoàng Controls. All rights reserved.</p>
             </div>
         </div>
     </footer>
